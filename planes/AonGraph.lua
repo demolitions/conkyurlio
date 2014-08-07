@@ -68,11 +68,13 @@ function NewColor(red, green, blue, alpha)
 end
 
 function SetColor(cr, color)
-  if (color["r"] == nil) then color["r"] = 1; end
-  if (color["g"] == nil) then color["g"] = 1; end
-  if (color["b"] == nil) then color["b"] = 1; end
-  if (color["a"] == nil) then color["a"] = 1; end
-  cairo_set_source_rgba (cr,color["r"],color["g"],color["b"],color["a"])
+  if (color ~= nil) then
+	  if (color["r"] == nil) then color["r"] = 1; end
+	  if (color["g"] == nil) then color["g"] = 1; end
+	  if (color["b"] == nil) then color["b"] = 1; end
+	  if (color["a"] == nil) then color["a"] = 1; end
+	  cairo_set_source_rgba (cr,color["r"],color["g"],color["b"],color["a"])
+  end;
 end
 
 -- Cairo font slant enum:

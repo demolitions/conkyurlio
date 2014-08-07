@@ -52,8 +52,8 @@ alignment bottom_right
 
 # Gap between borders of screen and text
 # same thing as passing -x at command line
-gap_x 5
-gap_y 5
+gap_x 20
+gap_y 20
 
 # Subtract file system buffers from used memory?
 no_buffers yes
@@ -63,11 +63,11 @@ uppercase no
 
 # number of cpu samples to average
 # set to 1 to disable averaging
-cpu_avg_samples 2
+cpu_avg_samples 4
 
 # number of net samples to average
 # set to 1 to disable averaging
-net_avg_samples 2
+net_avg_samples 4
 
 # Force UTF8? note that UTF8 support required XFT
 override_utf8_locale yes
@@ -83,3 +83,6 @@ lua_draw_hook_pre conky_main
 
 TEXT
 
+conky_planes
+${cpu}
+${time "%S"}

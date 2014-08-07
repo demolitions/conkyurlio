@@ -35,5 +35,5 @@ function PolarXPos(angle, radius)
 end
 
 function PolarYPos(angle, radius)
-	return (radius * math.sin(Deg2Rad(ReduceAngle(-angle)))) * HUD_Scale;
+	return (radius * math.sin(Deg2Rad(ReduceAngle(-angle))));
 end
