@@ -1,8 +1,8 @@
 #background yes
 own_window yes
 own_window_transparent yes
-#own_window_hints undecorate,below,sticky,skip_taskbar,skip_pager
-#own_window_type desktop
+own_window_hints undecorate,below,sticky,skip_taskbar,skip_pager
+own_window_type desktop
 #own_window_argb_visual yes
 #own_window_argb_value 0
 double_buffer yes
@@ -40,15 +40,15 @@ stippled_borders 0
 border_width 1
 
 # Default colors and also border colors
-default_color 303030
+default_color 88ffff
 #default_shade_color white
 #default_outline_color black
 
 # Text alignment, other possible values are commented
 #alignment top_left
 #alignment top_right
-#alignment bottom_left
-alignment bottom_right
+alignment bottom_left
+#alignment bottom_right
 
 # Gap between borders of screen and text
 # same thing as passing -x at command line
@@ -75,14 +75,50 @@ override_utf8_locale yes
 # Add spaces to keep things from moving about?  This only affects certain objects.
 use_spacer left
 
-lua_load AonMath.lua
-lua_load AonUtils.lua
-lua_load AonGraph.lua
 lua_load planes.lua
 lua_draw_hook_pre conky_main
 
 TEXT
 
-conky_planes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                           conky_planes
 ${cpu}
-${time "%S"}
+0-${cpu cpu0}
+1-${cpu cpu1}
+2-${cpu cpu2}
+3-${cpu cpu3}
+4-${cpu cpu4}
