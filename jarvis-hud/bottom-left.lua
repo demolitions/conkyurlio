@@ -1,5 +1,8 @@
 require 'cairo'
 require 'imlib2'
+require 'AonGraph'
+require 'AonUtils'
+require 'AonMath'
 
 function conky_main()
   if conky_window == nil then return end;
@@ -27,7 +30,7 @@ function conky_main()
   SetColor(cr, c_celeste);
   cairo_show_text(cr, "dmesg");
   cairo_rotate(cr, -Deg2Rad(-90));
-  
+
   -- PROCESS LIST
   cairo_set_font_size(cr,10)
   local proc = io.popen("dmesg | tail -n15", "r");
@@ -48,7 +51,7 @@ function conky_main()
   --imlib_context_set_image(image)
   --imlib_render_image_on_drawable(0,0)
   --imlib_free_image()
-  
+
   ----------------------------------
   cairo_destroy(cr)
   cairo_surface_destroy(cs)

@@ -1,0 +1,6 @@
+#!/bin/bash
+pkill -x -9 'conky'
+cd ~/.conky
+conky -c bottom-right.rc
+conky -c bottom-left.rc
+

@@ -1,5 +1,7 @@
 require 'cairo'
 require 'imlib2'
+require 'AonUtils'
+require 'AonGraph'
 
 HUD_CenterBase = {410,264}
 HUD_CenterLeft = {370,264}
@@ -46,7 +48,7 @@ function conky_main()
     PolarText(cr, angle, 134, color, 10, t[3]:sub(1,maxchar));
   end
   proc:close()
-  
+
   -- PC NAME
   cairo_select_font_face(cr, font, font_slant, font_bold);
   ArcText(cr, -149, 205, c_orange, 16, conky_parse("${nodename}"));
